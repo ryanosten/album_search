@@ -49,7 +49,7 @@ $('form').on('submit', function(e){
 
 function albumDetail(album){
 	console.log(album);
-	$('.main-content').css('max-width': '100%');
+	$('.main-content').css('max-width', '100%');
 	$('.detail-name').text(album.name);
 	$('.detail-artist').text(album.artists[0].name);
 
@@ -81,7 +81,7 @@ $('ul').on('click', '.album-wrap', function(){
 })
 
 $('#back-to-search').on('click', function(){
-	$('.main-content').css('max-width': '90%');
+	$('.main-content').css('max-width', '90%');
 	$('.detail-name').empty();
 	$('.detail-artist').empty();
 	$('.track').html('');
