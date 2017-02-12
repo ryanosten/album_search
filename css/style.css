@@ -186,11 +186,12 @@ img.album-art {
 .detail-page {
   position: relative;
   bottom: 40px;
+  max-width: 100%;
 }
 
 .detail-header {
   height: 220px;
-  width: 150%;
+  max-width: 100%;
   background-color: #4C4C4C;
 }
 
@@ -199,9 +200,10 @@ img.album-art {
   position: relative;
   left: 600px;
   top: 115px;
+  max-width: 95%;
 }
 
-.detail-header a {
+#back-to-search {
   position: absolute;
   top: 40px;
   left: 250px;
@@ -209,7 +211,7 @@ img.album-art {
   color: #B1B1B1;
 }
 
-.detail-header a::before {
+#back-to-search::before {
   content: '';
   width: .5em;
   height: .5em;
@@ -246,12 +248,11 @@ img.album-art {
 }
 
 .detail-image-container {
-  float: left;
   overflow: hidden;
   max-width: 300px;
   max-height: 300px;
   position: absolute;
-  bottom: 190px;
+  top: 100px;
   left:250px;
   border: 10px solid white;
 }
