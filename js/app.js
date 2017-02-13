@@ -58,6 +58,16 @@
 
 	//album description page callback function
 	function albumDetail(album){
+		
+		//hide albums page
+		$('#albums').hide();
+
+		//css change to main-content container
+		$('.main-content').css({
+			'width': '100%',
+			'max-width': "3000px"
+		});
+
 		console.log(album);
 
 		//variable to store year from release_datel property
@@ -78,17 +88,15 @@
 		$('.track-list').html(tracklistHTML)
 		//insert album image into DOM
 		$('.detail-image-container img').attr('src', `${album.images[0].url}`)
+
+		//show details page
+		$('.detail-page').show();
+		
 	}
 
 
 	//click handler to fire detail page and ajax GET request for album detail
 	$('ul').on('click', '.album-wrap', function(){
-
-		//css change to main-content container
-		$('.main-content').css({
-			'width': '100%',
-			'max-width': "3000px"
-		});
 		
 		//get spotifyIDof element clicked
 		var spotifyID = $(this).attr('id');
@@ -98,11 +106,6 @@
 
 		//create an ajax request to the OMDB API
 		$.getJSON(httpsURL, albumDetail);
-
-		//hide albums page
-		$('#albums').hide();
-		//show details page
-		$('.detail-page').show();
 		
 	})
 
